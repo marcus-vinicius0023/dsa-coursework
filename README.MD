@@ -1,0 +1,1 @@
+Repositorio para guardar minha anotações od curso de Estrutura de dados e algoritimos do Augusto Galego
