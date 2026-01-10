@@ -1,20 +1,20 @@
 from typing import Optional
 
-def binary_searh(str, target) -> Optional[int]: #Return int or None
+def binary_searh(arr, target) -> Optional[int]: #Return int or None
 
-    if str == None: return None
+    if arr == None: return None
 
     left = 0
-    right = len(str)
+    right = len(arr)
     steps = 0
 
     while left < right:
         steps += 1
         mid = int((left + right) / 2)
-        if target == str[mid]:
+        if target == arr[mid]:
             print(steps)
             return mid
-        elif target > str[mid]:
+        elif target > arr[mid]:
             left = mid + 1
         else:
             right = mid
