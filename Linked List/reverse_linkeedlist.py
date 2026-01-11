@@ -1,4 +1,4 @@
-from linkeed_lists import LinkeedList, DoublyLinkeedList
+from linkeed_lists import LinkeedList
 
 from typing import Optional
 
