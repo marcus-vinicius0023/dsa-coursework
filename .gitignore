@@ -1,5 +1,5 @@
 Makefile
 __pycache__
 
+tests_exponentialsearch.py
 tests_linkeed_list.py
-testes.py
