@@ -2,11 +2,17 @@ class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
+
+class DoublyNode:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
         self.prev = None
 
+
 class LinkeedList:
-    def __init__(self):
-        self.head = None
+    def __init__(self, head:[Node | None] = None):
+        self.head = head
     
     def add(self, value) -> None:
         new_node = Node(value)
@@ -41,7 +47,7 @@ class DoublyLinkeedList:
         self.tail = None
     
     def add_front(self, value) -> None:
-        new_node = Node(value)
+        new_node = DoublyNode(value)
         new_node.next = self.head
         if self.head:
             self.head.prev = new_node
@@ -51,7 +57,7 @@ class DoublyLinkeedList:
         self.head = new_node
 
     def add_back(self, value) -> None:
-        new_node = Node(value)
+        new_node = DoublyNode(value)
         new_node.prev = self.tail
         if self.tail:
             self.tail.next = new_node

@@ -1,26 +1,18 @@
-from linkeed_lists import LinkeedList
+from linkeed_lists import Node
 
-def mergeTwoLists(list1, list2):
-    curr_1 = list1
-    curr_2 = list2
+def merge_two_lists(list1, list2):
+    dummy = Node(0)
+    tail = dummy
 
-    new_list = LinkeedList()
-    curr_nl = new_list
-
-    while curr_1 and curr_2:
-        if curr_1.val <= curr_2.val:
-            curr_nl.next = curr_1
-            curr_nl = curr_nl.next
-            curr_1 = curr_1.next
+    while list1 and list2:
+        if list1.value <= list2.value:
+            tail.next = list1
+            list1 = list1.next
         else:
-            curr_nl.next = curr_2
-            curr_nl = curr_nl.next
-            curr_2 = curr_2.next
+            tail.next = list2
+            list2 = list2.next
+        tail = tail.next
+
+    tail.next = list1 or list2# Either list1 or list2 will always be true, so this syntax captures the true value and assigns it to tail.next.
     
-    if not curr_2 and curr_1:
-        curr_nl.next = curr_1
-
-    elif not curr_1 and curr_2:
-        curr_nl.next = curr_2
-
-    return new_list.next
+    return dummy.next # dumy.next because the list is initialized with an empty node

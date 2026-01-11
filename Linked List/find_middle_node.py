@@ -1,9 +1,9 @@
 from linkeed_lists import LinkeedList, Node
 from typing import Optional
 
-def middleNode(l_list) -> Optional[Node]:
-    head = l_list.head
-    ahead = head
+def middle_node(l_list) -> Optional[Node]:
+    head = l_list
+    ahead = head.next
 
     while ahead and ahead.next:
         head = head.next
